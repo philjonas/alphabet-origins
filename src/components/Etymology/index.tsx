@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Divider from '../Divider/index';
+import LogogramBox from '../LogogramBox/index';
 import './style.css';
 
 interface EtymologyProps {
@@ -12,13 +14,13 @@ interface EtymologyProps {
 const Etymology: React.FunctionComponent<EtymologyProps> = (props) => {
     return <div className="container">
         <div className="letter-container">
-            <div className="egyptian">{props.egyptian}</div>
-            <div className="latin"> &gt; </div>
-            <div className="phoenician">{props.phoenician}</div>
-            <div className="latin"> &gt; </div>
-            <div className="greek">{props.greek}</div>
-            <div className="latin"> &gt; </div>
-            <div className="latin">{props.latin}</div>
+            <LogogramBox symbol={props.egyptian} legend="egyptian" isSmaller/>
+            <Divider />
+            <LogogramBox symbol={props.phoenician} legend="phoenician" />
+            <Divider />
+            <LogogramBox symbol={props.greek} legend="greek" />
+            <Divider />
+            <LogogramBox symbol={props.latin} legend="latin" />
         </div>
         <h2>{props.meaning}</h2>
     </div>;

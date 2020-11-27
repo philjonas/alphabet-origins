@@ -1,0 +1,16 @@
+.symbol{
+    font-size: 120px;
+}
+
+.smaller-symbol{
+    font-size: 100px;
+}
+
+.legend{
+    margin: auto;
+}
+
+.container-logogram{
+    display: grid;
+    height: 100%;
+}
