@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "phoenician": "𐤀‎",
+    "meaning": "ox, head of cattle",
+    "hieroglyph": "𓃾",
+    "greek": "Αα",
+    "latin": "Aa"
+  },
+  {
+    "id": 2,
+    "phoenician": "𐤁‎",
+    "meaning": "house",
+    "hieroglyph": "𓉐",
+    "greek": "Ββ",
+    "latin": "Bb"
+  },
+  {
+    "id": 3,
+    "phoenician": "𐤂",
+    "meaning": "throwing stick (or camel)",
+    "hieroglyph": "𓌙",
+    "greek": "Γγ",
+    "latin": "Cc, Gg"
+  },
+  {
+    "id": 4,
+    "phoenician": "𐤃",
+    "meaning": "door (or fish)",
+    "hieroglyph": "𓇯",
+    "greek": "Δδ",
+    "latin": "Dd"
+  },
+  {
+    "id": 5,
+    "phoenician": "𐤄‎",
+    "meaning": "window (or jubilation)",
+    "hieroglyph": "𓀠",
+    "greek": "Εε",
+    "latin": "Ee"
+  },
+  {
+    "id": 6,
+    "phoenician": "𐤅‎",
+    "meaning": "hook",
+    "hieroglyph": "𓏲",
+    "greek": "(Ϝϝ), Υυ",
+    "latin": "Ff, Uu, Vv, Yy, Ww"
+  },
+  {
+    "id": 7,
+    "phoenician": "𐤆",
+    "meaning": "weapon (or manacle)",
+    "hieroglyph": "𓏭",
+    "greek": "Ζζ",
+    "latin": "Zz"
+  },
+  {
+    "id": 8,
+    "phoenician": "𐤇",
+    "meaning": "courtyard/wall",
+    "hieroglyph": "𓉗/𓈈",
+    "greek": "Ηη",
+    "latin": "Hh"
+  },
+  {
+    "id": 9,
+    "phoenician": "𐤈",
+    "meaning": "wheel",
+    "hieroglyph": "𓄤",
+    "greek": "Θθ",
+    "latin": null
+  },
+  {
+    "id": 10,
+    "phoenician": "𐤉‎",
+    "meaning": "arm, hand",
+    "hieroglyph": "𓂝",
+    "greek": "Ιι",
+    "latin": "Ii, Jj"
+  },
+  {
+    "id": 11,
+    "phoenician": "𐤊",
+    "meaning": "palm of a hand",
+    "hieroglyph": "𓂧",
+    "greek": "Κκ",
+    "latin": "Kk"
+  },
+  {
+    "id": 12,
+    "phoenician": "𐤋‎",
+    "meaning": "goad",
+    "hieroglyph": "𓌅",
+    "greek": "Λλ",
+    "latin": "Ll"
+  },
+  {
+    "id": 13,
+    "phoenician": "𐤌‎",
+    "meaning": "water",
+    "hieroglyph": "𓈖",
+    "greek": "Μμ",
+    "latin": "Mm"
+  },
+  {
+    "id": 14,
+    "phoenician": "𐤍‎",
+    "meaning": "serpent (or fish)",
+    "hieroglyph": "𓆓",
+    "greek": "Νν",
+    "latin": "Nn"
+  },
+  {
+    "id": 15,
+    "phoenician": "𐤎‎",
+    "meaning": "pillar",
+    "hieroglyph": "𓊽",
+    "greek": "Ξξ",
+    "latin": null
+  },
+  {
+    "id": 16,
+    "phoenician": "𐤏‎",
+    "meaning": "eye",
+    "hieroglyph": "𓁹",
+    "greek": "Οο, Ωω",
+    "latin": "Oo"
+  },
+  {
+    "id": 17,
+    "phoenician": "𐤐‎",
+    "meaning": "mouth (or corner)",
+    "hieroglyph": "𓂋",
+    "greek": "Ππ",
+    "latin": "Pp"
+  },
+  {
+    "id": 18,
+    "phoenician": "𐤑",
+    "meaning": "papyrus plant/fish hook",
+    "hieroglyph": "𓇑",
+    "greek": "(Ϻϻ)",
+    "latin": null
+  },
+  {
+    "id": 19,
+    "phoenician": "𐤒‎",
+    "meaning": "needle eye",
+    "hieroglyph": "𓃻",
+    "greek": "Ϙϙ",
+    "latin": "Qq"
+  },
+  {
+    "id": 20,
+    "phoenician": "𐤓‎",
+    "meaning": "head",
+    "hieroglyph": "𓁶",
+    "greek": "Ρρ",
+    "latin": "Rr"
+  },
+  {
+    "id": 21,
+    "phoenician": "𐤔‎",
+    "meaning": "tooth (or sun)",
+    "hieroglyph": "𓌓",
+    "greek": "Σς",
+    "latin": "Ss"
+  },
+  {
+    "id": 22,
+    "phoenician": "𐤕",
+    "meaning": "mark",
+    "hieroglyph": "𓏴",
+    "greek": "Ττ",
+    "latin": "Tt"
+  }
+]
