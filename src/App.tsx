@@ -9,6 +9,7 @@ import {
 import './App.css';
 import './languages/languages.css';
 import { EtymologyPage } from './components/EtymologyPage'
+import { HieroglyphicsHeader } from './components/HieroglyphicsHeader'
 
 export const App = () => {
   return (
@@ -16,17 +17,7 @@ export const App = () => {
       <Router>
         <h2>The Hieroglyphic Origins of the Greek and Latin Alphabets</h2>
 
-        <ul>
-          <li>
-            <Link to="/1">1</Link>
-          </li>
-          <li>
-            <Link to="/2">2</Link>
-          </li>
-          <li>
-            <Link to="/3">3</Link>
-          </li>
-        </ul>
+        <HieroglyphicsHeader />
 
         <Switch>
           <Route path="/:id" children={<EtymologyPage />} />

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
-import {
-    useParams
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { EtymologyCard } from '../EtymologyCard'
 import { LogogramType, ParamType, StateType } from '../../store/types'
 import { setId } from "../../store/actions";
