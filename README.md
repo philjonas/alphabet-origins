@@ -1,3 +1,6 @@
+# Check out the final product:
+## https://philjonas.github.io/alphabet-origins/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
