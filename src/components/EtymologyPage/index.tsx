@@ -27,8 +27,6 @@ export const EtymologyPageTemplate = ({ logo, setId }: { logo: LogogramType | un
         setId(idNumber)
     });
 
-    console.log(id, logo)
-
     return (
         <div>
             <EtymologyCard {...logo} />
