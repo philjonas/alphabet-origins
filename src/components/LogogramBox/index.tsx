@@ -2,7 +2,7 @@ import * as React from 'react';
 import './style.css';
 
 interface LogogramBoxProps {
-    symbol?: string,
+    symbol?: string | null,
     legend?: string,
     isSmaller?:boolean,
 }

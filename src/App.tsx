@@ -8,19 +8,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import './languages/languages.css';
-
-import Etymology from './components/Etymology/index'
-
-const Child = () => {
-  let { id }: { id?: string } = useParams();
-
-  return (
-      <div>
-          <h3>ID: {id}</h3>
-          <Etymology />
-      </div>
-  );
-}
+import {EtymologyPage} from './components/EtymologyPage' 
 
 const App = () => {
   return (
@@ -42,8 +30,8 @@ const App = () => {
                 </ul>
 
                 <Switch>
-                    <Route path="/:id" children={<Child />} />
-                    <Route path="*" children={<Child />} />
+                    <Route path="/:id" children={<EtymologyPage />} />
+                    <Route path="*" children={<EtymologyPage />} />
                 </Switch>
             </div>
         </Router>
