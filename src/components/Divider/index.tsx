@@ -10,7 +10,7 @@ const Divider: React.FunctionComponent<DividerProps> = (props) => {
 }
 
 Divider.defaultProps = {
-    barrier: '>',
+    barrier: '...',
 }
 
 export default Divider;

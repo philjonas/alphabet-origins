@@ -8,35 +8,32 @@ import {
 } from "react-router-dom";
 import './App.css';
 import './languages/languages.css';
-import {EtymologyPage} from './components/EtymologyPage' 
+import { EtymologyPage } from './components/EtymologyPage'
 
-const App = () => {
+export const App = () => {
   return (
     <div className="App">
       <Router>
-            <div>
-                <h2>Accounts</h2>
+        <h2>The Hieroglyphic Origins of the Greek and Latin Alphabets</h2>
 
-                <ul>
-                    <li>
-                        <Link to="/1">1</Link>
-                    </li>
-                    <li>
-                        <Link to="/2">2</Link>
-                    </li>
-                    <li>
-                        <Link to="/3">3</Link>
-                    </li>
-                </ul>
+        <ul>
+          <li>
+            <Link to="/1">1</Link>
+          </li>
+          <li>
+            <Link to="/2">2</Link>
+          </li>
+          <li>
+            <Link to="/3">3</Link>
+          </li>
+        </ul>
 
-                <Switch>
-                    <Route path="/:id" children={<EtymologyPage />} />
-                    <Route path="*" children={<EtymologyPage />} />
-                </Switch>
-            </div>
-        </Router>
+        <Switch>
+          <Route path="/:id" children={<EtymologyPage />} />
+          <Route path="*" children={<EtymologyPage />} />
+        </Switch>
+
+      </Router>
     </div>
   );
 }
-
-export default App;
