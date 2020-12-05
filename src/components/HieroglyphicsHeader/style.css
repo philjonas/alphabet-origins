@@ -4,10 +4,6 @@
   padding: 10px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .hieroglyphics-container {
   display: flex;
   flex-wrap: wrap;
@@ -16,9 +12,10 @@ a {
 }
 
 .hieroglyph-link {
-  border: 1px solid #000;
+  border: 1px solid #2d2e16;
   margin: auto auto 2% auto;
   border-radius: 20%;
+  background-color: #a5a84d;
 }
 
 @media screen and (max-width: 480px) {

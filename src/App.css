@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+.etymology-info{
+  font-style: italic;
+  font-size: 10px;
+}
+
 @media screen and (max-width: 480px) {
   .page-title {
     margin: auto;

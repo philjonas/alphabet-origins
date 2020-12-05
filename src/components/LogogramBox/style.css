@@ -6,6 +6,11 @@
   font-size: 100px;
 }
 
+.symbol,
+.smaller-symbol {
+  margin: auto;
+}
+
 .legend {
   margin: auto;
   font-style: italic;
@@ -14,13 +19,6 @@
 .container-logogram {
   display: grid;
   height: 100%;
-  border: 1px solid #000;
+  border: 1px solid #2d2e16;
   padding: 5px;
-}
-
-@media screen and (max-width: 480px) {
-  .symbol,
-  .smaller-symbol {
-    margin: auto;
-  }
 }

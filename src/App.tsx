@@ -19,7 +19,7 @@ export const App = () => {
           <Route path="/:id" children={<EtymologyPage />} />
           <Route path="*" children={<EtymologyPage />} />
         </Switch>
-        <p>Information taken from: <a href="https://en.wikipedia.org/wiki/Phoenician_alphabet"> Wikipedia's Phoenician Alphabet</a> page</p>
+        <p className="etymology-info">Information taken from <a href="https://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank"> Wikipedia's Phoenician Alphabet</a> page</p>
       </Router>
     </div>
   );
