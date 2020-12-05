@@ -1,8 +1,15 @@
-.page-title{
-    margin: auto;
+.page-title {
+  margin: auto;
 }
 
-.App{
-    display: flex;
-    flex-direction: column;
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 480px) {
+  .page-title {
+    margin: auto;
+    font-size: 20px;
+  }
 }

@@ -1,29 +1,35 @@
-.egyptian{
-    font-size: 120px;
+.egyptian {
+  font-size: 120px;
 }
 
-.phoenician{
-    font-size: 120px;
+.phoenician {
+  font-size: 120px;
 }
 
-.greek{
-    font-size: 100px;
+.greek {
+  font-size: 100px;
 }
 
-.latin{
-    font-size: 100px;
+.latin {
+  font-size: 100px;
 }
 
-.letter-container{
-    display: flex;
-    align-content: center;
-    margin: auto;
+.letter-container {
+  display: flex;
+  align-content: center;
+  margin: auto;
 }
 
-.logo-container{
-    display: grid;
+.logo-container {
+  display: grid;
 }
 
-.letter-meaning{
-    margin: auto;
+.letter-meaning {
+  margin: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .letter-container {
+    display: block;
+  }
 }
