@@ -28,9 +28,7 @@ export const EtymologyPageTemplate = ({ logo, setId }: { logo: LogogramType | un
     });
 
     return (
-        <div>
-            <EtymologyCard {...logo} />
-        </div>
+        <EtymologyCard {...logo} />
     );
 }
 
