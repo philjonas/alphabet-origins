@@ -20,6 +20,10 @@
     margin: auto;
 }
 
-.container{
+.logo-container{
     display: grid;
+}
+
+.letter-meaning{
+    margin: auto;
 }

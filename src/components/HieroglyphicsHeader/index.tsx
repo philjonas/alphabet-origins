@@ -14,13 +14,13 @@ export const HieroglyphicsTemplate = ({ logograms }: { logograms: LogogramType[]
         const linkTo = '/' + logo.id?.toString()
         return (
             <Link to={linkTo}>
-                <span className="hieroglyph-btn">{logo.hieroglyph}</span>
+                <span className="hieroglyph-link">{logo.hieroglyph}</span>
             </Link>
         )
     })
 
     return (
-        <div>{logogramComponents}</div>
+        <div className="hieroglyph-container">{logogramComponents}</div>
     );
 }
 

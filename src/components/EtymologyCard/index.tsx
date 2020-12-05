@@ -6,7 +6,7 @@ import { LogogramType } from '../../store/types'
 
 export const EtymologyCard: React.FunctionComponent<LogogramType> = (props) => {
     const { hieroglyph, phoenician, greek, latin, meaning } = props;
-    return <div className="container">
+    return <div className="logo-container">
         <div className="letter-container">
             <LogogramBox symbol={hieroglyph} legend="egyptian" isSmaller />
             <Divider />
@@ -16,7 +16,7 @@ export const EtymologyCard: React.FunctionComponent<LogogramType> = (props) => {
             {latin && <Divider />}
             {latin && <LogogramBox symbol={latin} legend="latin" />}
         </div>
-        <h2>{meaning}</h2>
+        <h2 className="letter-meaning">{meaning}</h2>
     </div>;
 }
 

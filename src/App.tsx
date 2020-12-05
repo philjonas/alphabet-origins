@@ -4,24 +4,21 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import './App.css';
 import './languages/languages.css';
 import { EtymologyPage } from './components/EtymologyPage'
 import { HieroglyphicsHeader } from './components/HieroglyphicsHeader'
+import './App.css';
 
 export const App = () => {
   return (
     <div className="App">
       <Router>
-        <h2>The Hieroglyphic Origins of the Greek and Latin Alphabets</h2>
-
+        <h1 className="page-title">The Hieroglyphic Origins of the Greek and Latin Alphabets</h1>
         <HieroglyphicsHeader />
-
         <Switch>
           <Route path="/:id" children={<EtymologyPage />} />
           <Route path="*" children={<EtymologyPage />} />
         </Switch>
-
       </Router>
     </div>
   );
