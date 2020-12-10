@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <BrowserRouter>
+    <h1
+      className="page-title"
+    >
+      The Hieroglyphic Origins of the Greek and Latin Alphabets
+    </h1>
+    <Connect(HieroglyphicsTemplate) />
+    <Switch>
+      <Route
+        path="/:id"
+      >
+        <Connect(EtymologyPageTemplate) />
+      </Route>
+      <Route
+        path="*"
+      >
+        <Connect(EtymologyPageTemplate) />
+      </Route>
+    </Switch>
+    <p
+      className="etymology-info"
+    >
+      Information taken from 
+      <a
+        href="https://en.wikipedia.org/wiki/Phoenician_alphabet"
+        target="_blank"
+      >
+         Wikipedia's Phoenician Alphabet
+      </a>
+       page
+    </p>
+  </BrowserRouter>
+</div>
+`;

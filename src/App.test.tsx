@@ -1,9 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import Enzyme, { shallow, render, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from 'enzyme-adapter-react-16';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+Enzyme.configure({ adapter: new Adapter() })
+import { App } from './App';
+
+
+test('matches snapshot', () => {
+  const wrapper = shallow(<App />)
+  expect(toJson(wrapper)).toMatchSnapshot();
+})
