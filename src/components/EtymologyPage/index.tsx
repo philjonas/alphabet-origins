@@ -5,22 +5,16 @@ import { EtymologyCard } from '../EtymologyCard'
 import { LogogramType, ParamType, StateType } from '../../store/types'
 import { setId } from "../../store/actions";
 
-const getLogoById = (state: StateType, id: number): LogogramType | undefined => {
-    const { logograms } = state
-    return logograms.find(x => x.id === id)
-}
-
 const mapDispatchToProps = {
     setId
 }
 
 const mapStateToProps = (state: StateType) => {
-    const { id } = state
-    const logo = getLogoById(state, id)
-    return { logo }
+    const { id, logograms } = state
+    return { logo: logograms.find(x => x.id === id) }
 }
 
-export const EtymologyPageTemplate = ({ logo, setId }: { logo: LogogramType | undefined, setId: any }) => {
+export const EtymologyPageTemplate = ({ logo, setId }: { logo?: LogogramType, setId: any }) => {
     let { id }: ParamType = useParams()
     const idNumber = id ? parseInt(id) : -1
     useEffect(() => {

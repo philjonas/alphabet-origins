@@ -1,11 +1,11 @@
-import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import Adapter from 'enzyme-adapter-react-16';
-import { HieroglyphicsTemplate } from '.';
-import configureMockStore from 'redux-mock-store';
-import { LogogramType, StateType } from '../../store/types';
-import { connect, Provider } from "react-redux";
+import React from 'react'
+import Enzyme, { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
+import Adapter from 'enzyme-adapter-react-16'
+import configureMockStore from 'redux-mock-store'
+import { connect, Provider } from "react-redux"
+import { LogogramType, StateType } from '../../store/types'
+import { HieroglyphicsTemplate } from '.'
 
 Enzyme.configure({ adapter: new Adapter() })
 const mockStore = configureMockStore();
@@ -15,16 +15,23 @@ const mapStateToProps = (state: StateType) => {
   return { logograms }
 }
 
-
 describe('HieroglyphicsHeader', () => {
-
   let wrapper: any;
   let store;
 
   beforeEach(() => {
     const initialState: StateType = {
-      logograms: [],
-      id: -1
+      logograms: [
+        {
+          id: 2,
+          phoenician: "𐤁‎",
+          meaning: "house",
+          hieroglyph: "𓉐",
+          greek: "Ββ",
+          latin: "Bb"
+        },
+      ],
+      id: 2
     };
     store = mockStore(initialState)
     const HieroglyphicsHeader = connect(mapStateToProps)(HieroglyphicsTemplate)
@@ -36,7 +43,6 @@ describe('HieroglyphicsHeader', () => {
   });
 
   test('matches snapshot', () => {
-    // const wrapper = shallow(<HieroglyphicsHeader />)
     expect(toJson(wrapper)).toMatchSnapshot();
   })
 })
