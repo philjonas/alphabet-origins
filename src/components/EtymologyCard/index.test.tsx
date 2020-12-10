@@ -4,10 +4,10 @@ import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })
-import { App } from './App';
+import {EtymologyCard} from '.';
 
 
 test('matches snapshot', () => {
-  const wrapper = shallow(<App />)
+  const wrapper = shallow(<EtymologyCard />)
   expect(toJson(wrapper)).toMatchSnapshot();
 })

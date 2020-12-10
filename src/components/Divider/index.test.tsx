@@ -4,10 +4,10 @@ import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })
-import { App } from './App';
+import {Divider} from '.';
 
 
 test('matches snapshot', () => {
-  const wrapper = shallow(<App />)
+  const wrapper = shallow(<Divider />)
   expect(toJson(wrapper)).toMatchSnapshot();
 })

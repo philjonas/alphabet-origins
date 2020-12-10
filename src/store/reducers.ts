@@ -7,7 +7,7 @@ const initialState: StateType = {
     id: -1
 };
 
-const rootReducer = (state: StateType = initialState, action: ActionType) => {
+export const rootReducer = (state: StateType = initialState, action: ActionType) => {
     if (action.type === SET_ID) {
         return Object.assign({}, state, {
             id: action.payload,
@@ -15,5 +15,3 @@ const rootReducer = (state: StateType = initialState, action: ActionType) => {
     }
     return state;
 };
-
-export default rootReducer;

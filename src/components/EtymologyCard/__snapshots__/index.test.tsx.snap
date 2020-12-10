@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="logo-container"
+>
+  <div
+    className="letter-container"
+  >
+    <LogogramBox
+      isSmaller={true}
+      legend="Egyptian"
+      symbol="𓃾"
+    />
+    <Divider
+      barrier="..."
+    />
+    <LogogramBox
+      legend="Phoenician"
+      symbol="𐤀"
+    />
+    <Divider
+      barrier="..."
+    />
+    <LogogramBox
+      legend="Greek"
+      symbol="Αα"
+    />
+    <Divider
+      barrier="..."
+    />
+    <LogogramBox
+      legend="Latin"
+      symbol="Aa"
+    />
+  </div>
+  <h2
+    className="letter-meaning"
+  >
+    Ox, head of cattle
+  </h2>
+</div>
+`;

@@ -7,11 +7,9 @@ interface LogogramBoxProps {
     isSmaller?:boolean,
 }
 
-const LogogramBox: React.FunctionComponent<LogogramBoxProps> = (props) => {
+export const LogogramBox: React.FunctionComponent<LogogramBoxProps> = (props) => {
     return <div className="container-logogram">
         <div className={props.isSmaller ? "smaller-symbol":"symbol"}>{props.symbol}</div>
         <div className="legend">{props.legend}</div>
     </div>;
 }
-
-export default LogogramBox;

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Divider from '../Divider/index';
-import LogogramBox from '../LogogramBox/index';
+import {Divider} from '../Divider/index';
+import {LogogramBox} from '../LogogramBox/index';
 import './style.css';
 import { LogogramType } from '../../store/types'
 
