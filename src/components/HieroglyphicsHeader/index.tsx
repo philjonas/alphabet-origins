@@ -10,10 +10,10 @@ const mapStateToProps = (state: StateType) => {
 }
 
 export const HieroglyphicsTemplate = ({ logograms }: { logograms: LogogramType[] }) => {
-    const logogramComponents = logograms.map(logo => {
+    const logogramComponents = logograms.map((logo, idx) => {
         const linkTo = '/hieroglyphics/' + logo.id?.toString()
         return (
-            <Link to={linkTo} className="hieroglyph-link">
+            <Link key={idx} to={linkTo} className="hieroglyph-link">
                 <span className="hieroglyphics-span">{logo.hieroglyph}</span>
             </Link>
         )

@@ -1,24 +1,40 @@
 input {
-    width: 80%;
-    margin: auto;
-    font-size: 25px;
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
 }
 
 .search-container {
-    display: contents;
+  display: flex;
+  flex-direction: column;
 }
 
-.search-results{
-    font-size: 30px;
-    display: ruby;
+.search-results {
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.letter-zoom{
-    font-size: 60px;
+.letter-zoom {
+  font-size: 60px;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.disclaimer{
-    margin: auto;
-    width: 80%;
-    font-size: 10px;
+.disclaimer {
+  margin: auto;
+  width: 80%;
+  font-size: 10px;
+}
+
+button {
+  width: 30%;
+  margin: auto;
+  background-color: transparent;
+  color: #2d2e16;
+  border: solid 1px #2d2e16;
+  margin-top: 10px;
 }

@@ -11,6 +11,7 @@ export interface StateType {
     logograms: LogogramType[]
     id: number
     letterMappings: Record<string, number>
+    search: string
 }
 
 export interface ActionType {

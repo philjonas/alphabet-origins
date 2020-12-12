@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { LogogramType, StateType } from '../../store/types'
 import { connect } from "react-redux";
+import { setSearch } from "../../store/actions";
 import './style.css';
 
 enum Language {
@@ -11,27 +12,32 @@ enum Language {
 }
 
 const translateText = (languageKey: Language, results: number[], logograms: LogogramType[]): React.ReactNode => {
-    return (results.map(result => {
+    return (results.map((result, idx) => {
         const obj = logograms.find(x => x.id === result)
         const letter = languageKey === Language.PHOEN || languageKey === Language.HIERO ? obj![languageKey] : obj![languageKey]![0]
 
-        return <div><a href={`/hieroglyphics/${obj!.id}`}>{letter}</a></div>
+        return <div key={idx}><a href={`/hieroglyphics/${obj!.id}`}>{letter}</a></div>
     })
     )
 }
 
-const mapStateToProps = (state: StateType) => {
-    const { letterMappings, logograms } = state
-    return { letterMappings, logograms }
+const mapDispatchToProps = {
+    setSearch
 }
 
-export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { letterMappings: Record<string, number>, logograms: LogogramType[] }) => {
-    const [searchTerm, setSearchTerm] = useState("");
+const mapStateToProps = (state: StateType) => {
+    const { letterMappings, logograms, search } = state
+    return { letterMappings, logograms, search }
+}
+
+export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms, search, setSearch }: { letterMappings: Record<string, number>, logograms: LogogramType[], search: string, setSearch:any }) => {
+    const [searchTerm, setSearchTerm] = useState(search);
     const s: number[] = []
     const [searchResults, setSearchResults] = useState(s);
     const handleChange = (event: React.InputHTMLAttributes<HTMLInputElement>) => {
         setSearchTerm((event as any).target.value);
     };
+    const clearSearch = () => {setSearchTerm('')}
     useEffect(() => {
         const results: number[] = []
         const searchList = searchTerm.toLowerCase().split('')
@@ -41,6 +47,7 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { lett
             )
         });
         setSearchResults(results)
+        setSearch(searchTerm)
     }, [searchTerm, letterMappings])
 
     return (
@@ -52,12 +59,13 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { lett
                 value={searchTerm}
                 onChange={handleChange}
             />
-            <p className="search-results">HIEROGLYPHICS: <span className="letter-zoom">{translateText(Language.HIERO, searchResults, logograms)}</span></p>
-            <p className="search-results">PHOENICIAN: <span className="letter-zoom">{translateText(Language.PHOEN, searchResults, logograms)}</span></p>
-            <p className="search-results">GREEK: {translateText(Language.GREEK, searchResults, logograms)}</p>
-            <p className="search-results">LATIN: {translateText(Language.LATIN, searchResults, logograms)}</p>
+            <button onClick={clearSearch}>Clear Input</button>
+            <div className="search-results">HIEROGLYPHICS: <div className="letter-zoom">{translateText(Language.HIERO, searchResults, logograms)}</div></div>
+            <div className="search-results">PHOENICIAN: <div className="letter-zoom">{translateText(Language.PHOEN, searchResults, logograms)}</div></div>
+            <div className="search-results">GREEK: {translateText(Language.GREEK, searchResults, logograms)}</div>
+            <div className="search-results">LATIN: {translateText(Language.LATIN, searchResults, logograms)}</div>
         </div>
     );
 };
 
-export const WriteHieroglyphics = connect(mapStateToProps)(WriteHieroglyphicsTemplate);
+export const WriteHieroglyphics = connect(mapStateToProps, mapDispatchToProps)(WriteHieroglyphicsTemplate);
