@@ -4,10 +4,10 @@ import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() })
-import { LogogramBox } from '.';
+import { WriteHieroglyphics } from '.';
 
 
 test('matches snapshot', () => {
-  const wrapper = shallow(<LogogramBox />)
+  const wrapper = shallow(<WriteHieroglyphics />)
   expect(toJson(wrapper)).toMatchSnapshot();
 })

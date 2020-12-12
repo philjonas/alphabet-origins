@@ -10,10 +10,36 @@ exports[`matches snapshot 1`] = `
     >
       The Hieroglyphic Origins of the Greek and Latin Alphabets
     </h1>
-    <Connect(HieroglyphicsTemplate) />
+    <div
+      className="link-container"
+    >
+      <Link
+        to="/"
+      >
+        Home
+      </Link>
+      <Link
+        to="/write"
+      >
+        Write in Hieroglyphics and Phoenician
+      </Link>
+    </div>
     <Switch>
       <Route
-        path="/:id"
+        exact={true}
+        path="/write"
+      >
+        <WriteHieroglyphics />
+      </Route>
+      <Route
+        exact={true}
+        path="/"
+      >
+        <Connect(EtymologyPageTemplate) />
+      </Route>
+      <Route
+        exact={true}
+        path="/hieroglyphics/:id"
       >
         <Connect(EtymologyPageTemplate) />
       </Route>

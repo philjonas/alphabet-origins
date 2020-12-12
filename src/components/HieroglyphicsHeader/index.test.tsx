@@ -31,7 +31,8 @@ describe('HieroglyphicsHeader', () => {
           latin: "Bb"
         },
       ],
-      id: 2
+      id: 2,
+      letterMappings: {}
     };
     store = mockStore(initialState)
     const HieroglyphicsHeader = connect(mapStateToProps)(HieroglyphicsTemplate)
