@@ -15,7 +15,7 @@ const translateText = (languageKey: Language, results: number[], logograms: Logo
         const obj = logograms.find(x => x.id === result)
         const letter = languageKey === Language.PHOEN || languageKey === Language.HIERO ? obj![languageKey] : obj![languageKey]![0]
 
-        return <a href={`/hieroglyphics/${obj!.id}`}>{letter}</a>
+        return <div><a href={`/hieroglyphics/${obj!.id}`}>{letter}</a></div>
     })
     )
 }
@@ -30,10 +30,7 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { lett
     const s: number[] = []
     const [searchResults, setSearchResults] = useState(s);
     const handleChange = (event: React.InputHTMLAttributes<HTMLInputElement>) => {
-        const target = (event as InputEvent).target
-        if (!target) return
-        const value = (target as any).value
-        setSearchTerm(value);
+        setSearchTerm((event as any).target.value);
     };
     useEffect(() => {
         const results: number[] = []

@@ -10,6 +10,7 @@ input {
 
 .search-results{
     font-size: 30px;
+    display: ruby;
 }
 
 .letter-zoom{
