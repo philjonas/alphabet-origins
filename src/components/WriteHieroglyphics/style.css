@@ -1,0 +1,23 @@
+input {
+    width: 80%;
+    margin: auto;
+    font-size: 25px;
+}
+
+.search-container {
+    display: contents;
+}
+
+.search-results{
+    font-size: 30px;
+}
+
+.letter-zoom{
+    font-size: 60px;
+}
+
+.disclaimer{
+    margin: auto;
+    width: 80%;
+    font-size: 10px;
+}

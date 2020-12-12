@@ -33,7 +33,7 @@ export const App = () => {
             <EtymologyPage />
           </Route>
         </Switch>
-        <p className="etymology-info">Information taken from <a href="https://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank"> Wikipedia's Phoenician Alphabet</a> page</p>
+        <p className="etymology-info">Information taken from <a href="https://en.wikipedia.org/wiki/Phoenician_alphabet" target="_blank" rel="noreferrer"> Wikipedia's Phoenician Alphabet</a> page</p>
       </Router>
     </div>
   );

@@ -39,7 +39,7 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { lett
     };
     useEffect(() => {
         const results: number[] = []
-        const searchList = searchTerm.split('')
+        const searchList = searchTerm.toLowerCase().split('')
         searchList.forEach((letter: string) => {
             Object.entries(letterMappings).find(
                 ([key, value]) => { if (key === letter) results.push(value) }
@@ -49,17 +49,18 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { lett
     }, [searchTerm, letterMappings])
 
     return (
-        <div>
+        <div className="search-container">
+            <p className="disclaimer">Disclaimer: This is a fun little gimmick, not an accurate representation of how Ancient Latin, Greek, Phoenician and Egyptian Hieroglyphics were written.</p>
             <input
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={handleChange}
             />
-            <p>{translateText(Language.LATIN, searchResults, logograms)}</p>
-            <p>{translateText(Language.GREEK, searchResults, logograms)}</p>
-            <p>{translateText(Language.PHOEN, searchResults, logograms)}</p>
-            <p>{translateText(Language.HIERO, searchResults, logograms)}</p>
+            <p className="search-results">HIEROGLYPHICS: <span className="letter-zoom">{translateText(Language.HIERO, searchResults, logograms)}</span></p>
+            <p className="search-results">PHOENICIAN: <span className="letter-zoom">{translateText(Language.PHOEN, searchResults, logograms)}</span></p>
+            <p className="search-results">GREEK: {translateText(Language.GREEK, searchResults, logograms)}</p>
+            <p className="search-results">LATIN: {translateText(Language.LATIN, searchResults, logograms)}</p>
         </div>
     );
 };
