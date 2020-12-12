@@ -26,7 +26,6 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
                 if (searchTerm.includes(key)) results.push(value)
             }
         )
-        console.log(results)
         setSearchResults(results);
     }, [searchTerm]);
 
@@ -39,8 +38,8 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
                 onChange={handleChange}
             />
             <ul>
-                {searchResults.map((item) => (
-                    <li>{item}</li>
+                {searchResults.map((item, index) => (
+                    <li key={index}>{item}</li>
                 ))}
             </ul>
         </div>
