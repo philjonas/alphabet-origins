@@ -1,15 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { StateType } from '../../store/types'
+import { LogogramType, StateType } from '../../store/types'
 import { connect } from "react-redux";
 import './style.css';
 
-const mapStateToProps = (state: StateType) => {
-    const { letterMappings } = state
-    // letterMappings: Record<string, number>
-    return { letterMappings }
+enum Language {
+    LATIN = 'latin',
+    GREEK = 'greek',
+    PHOEN = 'phoenician',
+    HIERO = 'hieroglyph'
 }
 
-export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings: Record<string, number> }) => {
+const translateText = (languageKey: Language, results: number[], logograms: LogogramType[]): string => {
+    let payload = ""
+    results.forEach(result => {
+        if (languageKey === Language.PHOEN || languageKey === Language.HIERO) {
+            payload += logograms.find(x => x.id === result)![languageKey]
+        } else {
+            payload += logograms.find(x => x.id === result)![languageKey]![0]
+        }
+    })
+    return payload
+}
+
+const mapStateToProps = (state: StateType) => {
+    const { letterMappings, logograms } = state
+    return { letterMappings, logograms }
+}
+
+export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms }: { letterMappings: Record<string, number>, logograms: LogogramType[] }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const s: number[] = []
     const [searchResults, setSearchResults] = useState(s);
@@ -20,14 +38,15 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
         setSearchTerm(value);
     };
     useEffect(() => {
-        const results : number[] = []
-        Object.entries(letterMappings).forEach(
-            ([key, value]) => {
-                if (searchTerm.includes(key)) results.push(value)
-            }
-        )
-        setSearchResults(results);
-    }, [searchTerm]);
+        const results: number[] = []
+        const searchList = searchTerm.split('')
+        searchList.forEach((letter: string) => {
+            Object.entries(letterMappings).find(
+                ([key, value]) => { if (key === letter) results.push(value) }
+            )
+        });
+        setSearchResults(results)
+    }, [searchTerm, letterMappings])
 
     return (
         <div>
@@ -37,11 +56,10 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
                 value={searchTerm}
                 onChange={handleChange}
             />
-            <ul>
-                {searchResults.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
+            <p>{translateText(Language.LATIN, searchResults, logograms)}</p>
+            <p>{translateText(Language.GREEK, searchResults, logograms)}</p>
+            <p>{translateText(Language.PHOEN, searchResults, logograms)}</p>
+            <p>{translateText(Language.HIERO, searchResults, logograms)}</p>
         </div>
     );
 };
