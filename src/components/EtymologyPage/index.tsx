@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 import { EtymologyCard } from '../EtymologyCard'
+import { HieroglyphicsHeader } from '../HieroglyphicsHeader'
 import { LogogramType, ParamType, StateType } from '../../store/types'
 import { setId } from "../../store/actions";
 
@@ -22,7 +23,11 @@ export const EtymologyPageTemplate = ({ logo, setId }: { logo?: LogogramType, se
     });
 
     return (
-        <EtymologyCard {...logo} />
+        <div>
+            <HieroglyphicsHeader />
+            <EtymologyCard {...logo} />
+        </div>
+
     );
 }
 
