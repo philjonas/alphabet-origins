@@ -10,16 +10,14 @@ enum Language {
     HIERO = 'hieroglyph'
 }
 
-const translateText = (languageKey: Language, results: number[], logograms: LogogramType[]): string => {
-    let payload = ""
-    results.forEach(result => {
-        if (languageKey === Language.PHOEN || languageKey === Language.HIERO) {
-            payload += logograms.find(x => x.id === result)![languageKey]
-        } else {
-            payload += logograms.find(x => x.id === result)![languageKey]![0]
-        }
+const translateText = (languageKey: Language, results: number[], logograms: LogogramType[]): React.ReactNode => {
+    return (results.map(result => {
+        const obj = logograms.find(x => x.id === result)
+        const letter = languageKey === Language.PHOEN || languageKey === Language.HIERO ? obj![languageKey] : obj![languageKey]![0]
+
+        return <a href={`/hieroglyphics/${obj!.id}`}>{letter}</a>
     })
-    return payload
+    )
 }
 
 const mapStateToProps = (state: StateType) => {
