@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { LogogramType, StateType } from '../../store/types'
+import {Link} from "react-router-dom";
 import { connect } from "react-redux";
+import { LogogramType, StateType } from '../../store/types'
 import { setSearch } from "../../store/actions";
 import './style.css';
 
@@ -16,7 +17,7 @@ const translateText = (languageKey: Language, results: number[], logograms: Logo
         const obj = logograms.find(x => x.id === result)
         const letter = languageKey === Language.PHOEN || languageKey === Language.HIERO ? obj![languageKey] : obj![languageKey]![0]
 
-        return <div key={idx}><a href={`/hieroglyphics/${obj!.id}`}>{letter}</a></div>
+        return <div key={idx}><Link to={`/hieroglyphics/${obj!.id}`}>{letter}</Link></div>
     })
     )
 }
