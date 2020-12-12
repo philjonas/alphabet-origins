@@ -4,9 +4,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import './languages/languages.css';
-import { EtymologyPage } from './components/EtymologyPage'
-import { HieroglyphicsHeader } from './components/HieroglyphicsHeader'
+import '../../languages/languages.css';
+import { EtymologyPage } from '../EtymologyPage'
+import { HieroglyphicsHeader } from '../HieroglyphicsHeader'
 import './App.css';
 
 export const App = () => {

@@ -1,22 +1,23 @@
 export interface LogogramType {
-    id?: number;
-    phoenician?: string;
-    meaning?: string;
-    hieroglyph?: string;
-    greek?: string;
-    latin?: string | null;
+    id?: number
+    phoenician?: string
+    meaning?: string
+    hieroglyph?: string
+    greek?: string
+    latin?: string | null
 }
 
 export interface StateType {
-    logograms: LogogramType[];
-    id: number;
+    logograms: LogogramType[]
+    id: number
+    letterMappings: Record<string, number>
 }
 
 export interface ActionType {
-    type: string;
-    payload: Object;
+    type: string
+    payload: Object
 }
 
 export interface ParamType {
-    id?: string;
+    id?: string
 }
