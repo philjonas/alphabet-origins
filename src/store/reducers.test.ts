@@ -13,6 +13,10 @@ describe("rootReducer", () => {
   })
 
   it("should return the initial state", () => {
-    expect(rootReducer(undefined, undefined)).toEqual(initialState);
+    const voidAction :ActionType = {
+      type: '',
+      payload:{}
+    }
+    expect(rootReducer(undefined, voidAction)).toEqual(initialState);
   });
 });

@@ -9,11 +9,7 @@ export const initialState: StateType = {
     letterMappings: latin_letters_mapping
 };
 
-export const rootReducer = (state: StateType = initialState, action?: ActionType): StateType => {
-    if(!action){
-        return state
-    }
-    
+export const rootReducer = (state: StateType = initialState, action: ActionType): StateType => {
     if (action.type === SET_ID) {
         return Object.assign({}, state, {
             id: action.payload,
