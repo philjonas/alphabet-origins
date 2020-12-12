@@ -11,7 +11,7 @@ const mapStateToProps = (state: StateType) => {
 
 export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings: Record<string, number> }) => {
     const [searchTerm, setSearchTerm] = useState("");
-    const s: string[] = []
+    const s: number[] = []
     const [searchResults, setSearchResults] = useState(s);
     const handleChange = (event: React.InputHTMLAttributes<HTMLInputElement>) => {
         const target = (event as InputEvent).target
@@ -20,11 +20,6 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
         setSearchTerm(value);
     };
     useEffect(() => {
-        // const results: string[] = letterMappings.filter((person) =>
-        //     person.toLowerCase().includes(searchTerm)
-        // );
-        // setSearchResults(results);
-        //console.log(key, value)
         const results : number[] = []
         Object.entries(letterMappings).forEach(
             ([key, value]) => {
@@ -32,6 +27,7 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings }: { letterMappings:
             }
         )
         console.log(results)
+        setSearchResults(results);
     }, [searchTerm]);
 
     return (
