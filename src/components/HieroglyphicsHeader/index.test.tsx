@@ -4,7 +4,8 @@ import toJson from 'enzyme-to-json'
 import Adapter from 'enzyme-adapter-react-16'
 import configureMockStore from 'redux-mock-store'
 import { connect, Provider } from "react-redux"
-import { LogogramType, StateType } from '../../store/types'
+import { StateType } from '../../store/types'
+import { initialState } from '../../store/reducers'
 import { HieroglyphicsTemplate } from '.'
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -20,20 +21,6 @@ describe('HieroglyphicsHeader', () => {
   let store;
 
   beforeEach(() => {
-    const initialState: StateType = {
-      logograms: [
-        {
-          id: 2,
-          phoenician: "𐤁‎",
-          meaning: "house",
-          hieroglyph: "𓉐",
-          greek: "Ββ",
-          latin: "Bb"
-        },
-      ],
-      id: 2,
-      letterMappings: {}
-    };
     store = mockStore(initialState)
     const HieroglyphicsHeader = connect(mapStateToProps)(HieroglyphicsTemplate)
     wrapper = shallow(

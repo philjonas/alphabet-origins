@@ -22,3 +22,10 @@ export interface ActionType {
 export interface ParamType {
     id?: string
 }
+
+export enum Language {
+    LATIN = 'latin',
+    GREEK = 'greek',
+    PHOEN = 'phoenician',
+    HIERO = 'hieroglyph'
+}

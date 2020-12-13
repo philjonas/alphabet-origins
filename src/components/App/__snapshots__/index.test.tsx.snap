@@ -29,7 +29,7 @@ exports[`matches snapshot 1`] = `
         exact={true}
         path="/write"
       >
-        <WriteHieroglyphics />
+        <Connect(WriteHieroglyphicsTemplate) />
       </Route>
       <Route
         exact={true}
@@ -55,6 +55,7 @@ exports[`matches snapshot 1`] = `
       Information taken from 
       <a
         href="https://en.wikipedia.org/wiki/Phoenician_alphabet"
+        rel="noreferrer"
         target="_blank"
       >
          Wikipedia's Phoenician Alphabet

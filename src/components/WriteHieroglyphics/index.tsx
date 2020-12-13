@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
-import { LogogramType, StateType } from '../../store/types'
+import { LogogramType, StateType, Language } from '../../store/types'
 import { setSearch } from "../../store/actions";
 import './style.css';
-
-enum Language {
-    LATIN = 'latin',
-    GREEK = 'greek',
-    PHOEN = 'phoenician',
-    HIERO = 'hieroglyph'
-}
 
 const translateText = (languageKey: Language, results: number[], logograms: LogogramType[]): React.ReactNode => {
     return (results.map((result, idx) => {
         const obj = logograms.find(x => x.id === result)
         const letter = languageKey === Language.PHOEN || languageKey === Language.HIERO ? obj![languageKey] : obj![languageKey]![0]
-
         return <div key={idx}><Link to={`/hieroglyphics/${obj!.id}`}>{letter}</Link></div>
     })
     )
@@ -40,11 +32,15 @@ export const WriteHieroglyphicsTemplate = ({ letterMappings, logograms, search, 
     };
     const clearSearch = () => {setSearchTerm('')}
     useEffect(() => {
-        const results: number[] = []
+        let results: number[] = []
         const searchList = searchTerm.toLowerCase().split('')
         searchList.forEach((letter: string) => {
             Object.entries(letterMappings).find(
-                ([key, value]) => { if (key === letter) results.push(value) }
+                ([key, value]) => { 
+                    if (key === letter){ 
+                        results = [...results, value] 
+                    }
+                }
             )
         });
         setSearchResults(results)
