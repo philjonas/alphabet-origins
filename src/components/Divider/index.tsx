@@ -5,8 +5,8 @@ interface DividerProps {
     barrier?: string,
 }
 
-export const Divider: React.FunctionComponent<DividerProps> = (props) => {
-    return <div className="divider">{props.barrier}</div>;
+export const Divider: React.FunctionComponent<DividerProps> = ({barrier}) => {
+    return <div className="divider">{barrier}</div>;
 }
 
 Divider.defaultProps = {
