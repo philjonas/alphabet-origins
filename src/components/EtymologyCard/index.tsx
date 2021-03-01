@@ -6,8 +6,7 @@ import { LogogramType } from '../../store/types'
 
 const capitalise = (text?: string): string => text ? text[0].toUpperCase() +
     text.slice(1) : ''
-export const EtymologyCard: React.FunctionComponent<LogogramType> = (props) => {
-    const { hieroglyph, phoenician, greek, latin, meaning } = props;
+export const EtymologyCard: React.FunctionComponent<LogogramType> = ({ hieroglyph, phoenician, greek, latin, meaning }) => {
     return <div className="logo-container">
         <div className="letter-container">
             <LogogramBox symbol={hieroglyph} legend="Egyptian" isSmaller />
