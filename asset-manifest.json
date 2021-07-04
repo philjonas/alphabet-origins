@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/alphabet-origins/static/css/main.8f5d9134.chunk.css",
-    "main.js": "/alphabet-origins/static/js/main.fee0e22d.chunk.js",
-    "main.js.map": "/alphabet-origins/static/js/main.fee0e22d.chunk.js.map",
+    "main.css": "/alphabet-origins/static/css/main.cc5eceb7.chunk.css",
+    "main.js": "/alphabet-origins/static/js/main.9cf9054e.chunk.js",
+    "main.js.map": "/alphabet-origins/static/js/main.9cf9054e.chunk.js.map",
     "runtime-main.js": "/alphabet-origins/static/js/runtime-main.0e79cbdb.js",
     "runtime-main.js.map": "/alphabet-origins/static/js/runtime-main.0e79cbdb.js.map",
-    "static/js/2.f9bec674.chunk.js": "/alphabet-origins/static/js/2.f9bec674.chunk.js",
-    "static/js/2.f9bec674.chunk.js.map": "/alphabet-origins/static/js/2.f9bec674.chunk.js.map",
+    "static/js/2.8d8dcd80.chunk.js": "/alphabet-origins/static/js/2.8d8dcd80.chunk.js",
+    "static/js/2.8d8dcd80.chunk.js.map": "/alphabet-origins/static/js/2.8d8dcd80.chunk.js.map",
     "index.html": "/alphabet-origins/index.html",
-    "static/css/main.8f5d9134.chunk.css.map": "/alphabet-origins/static/css/main.8f5d9134.chunk.css.map",
-    "static/js/2.f9bec674.chunk.js.LICENSE.txt": "/alphabet-origins/static/js/2.f9bec674.chunk.js.LICENSE.txt"
+    "static/css/main.cc5eceb7.chunk.css.map": "/alphabet-origins/static/css/main.cc5eceb7.chunk.css.map",
+    "static/js/2.8d8dcd80.chunk.js.LICENSE.txt": "/alphabet-origins/static/js/2.8d8dcd80.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e79cbdb.js",
-    "static/js/2.f9bec674.chunk.js",
-    "static/css/main.8f5d9134.chunk.css",
-    "static/js/main.fee0e22d.chunk.js"
+    "static/js/2.8d8dcd80.chunk.js",
+    "static/css/main.cc5eceb7.chunk.css",
+    "static/js/main.9cf9054e.chunk.js"
   ]
 }
