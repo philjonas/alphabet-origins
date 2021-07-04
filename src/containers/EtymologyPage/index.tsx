@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
-import { EtymologyCard } from '../EtymologyCard'
-import { HieroglyphicsHeader } from '../HieroglyphicsHeader'
 import { LogogramType, ParamType, StateType } from '../../store/types'
 import { setId } from "../../store/actions";
+import { HieroglyphicsHeader } from '../../components/HieroglyphicsHeader';
+import { EtymologyCard } from '../../components/EtymologyCard';
 
 const mapDispatchToProps = {
     setId
